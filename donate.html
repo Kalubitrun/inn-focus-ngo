@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Donate & Contact - INN FOCUS NGO | Scan & Donate</title>
-  <meta name="description" content="Donate to INN Focus NGO Ghazipur UP. UPI 9170694591@ybl, WhatsApp 9170694591. 12A & 80G approved - your donation is tax-exempt. Scan QR, donate via PhonePe, GPay, Paytm." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b2458" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>Donate and Contact — INN Focus NGO | UPI, Receipt, 80G</title>
+  <meta name="description" content="Donate to INN Focus NGO, Ghazipur. UPI 9170694591@ybl, WhatsApp +91 91706 94591. 12A and 80G. Receive a formal receipt for every donation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
 </head>
@@ -12,118 +18,138 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="images/logo.svg" alt="INN Focus NGO Logo" width="48" height="48" />
-        <span>
-          <strong>INN FOCUS NGO</strong>
-          <small>Educational Empowerment Society</small>
-        </span>
+      <a href="index.html" class="logo" aria-label="INN Focus NGO — Home">
+        <img src="images/logo.svg" alt="INN Focus NGO logo" width="44" height="44" />
+        <span class="logo-text"><strong>INN FOCUS NGO</strong><small>Educational Empowerment Society</small></span>
       </a>
-      <nav class="main-nav" id="mainNav">
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
+        <a href="about.html">About</a>
         <a href="work.html">Our Work</a>
-        <a href="donate.html" class="btn-donate">Donate Now ♥</a>
+        <a href="donate.html" class="btn-donate" aria-current="page">Donate</a>
       </nav>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </header>
 
   <main>
     <section class="page-hero">
       <div class="container">
-        <p class="badge">★ 12A & 80G Approved — Tax Benefit on Donations</p>
-        <h1>Donate & <span>Contact</span></h1>
-        <p>Your Donation Can Change Lives ♥ — Small Contributions Create Big Changes</p>
-        <p class="breadcrumb"><a href="index.html">Home</a> / Donate & Contact</p>
+        <p class="badge"><span class="dot"></span>12A and 80G · Receipt for every donation</p>
+        <h1>Donate and <span>Contact</span></h1>
+        <p>A documented, tax-recognised way to support classroom learning in Ghazipur.</p>
+        <p class="breadcrumb"><a href="index.html">Home</a> / Donate and Contact</p>
       </div>
     </section>
 
-    <!-- Donate main -->
     <section class="container donate-page-grid">
-      <!-- LEFT: QR -->
       <div class="qr-big-card">
-        <h3 class="qr-title">📱 Scan & Donate</h3>
-        <p class="qr-sub">Support Our Noble Cause ♡</p>
-        <img src="images/qr-upi.jpg" alt="Donation QR Code - UPI 9170694591@ybl Union Bank of India" />
-        <div class="upi-box">
+        <h3 class="qr-title">Scan to donate via UPI</h3>
+        <p class="qr-sub">All UPI apps supported · Reviewed before display</p>
+        <img src="images/qr-clean.png" alt="UPI QR code for donations to INN Focus NGO" loading="lazy" decoding="async" width="656" height="656" />
+        <div class="upi-box" style="margin:12px 24px 4px">
           <span>UPI: <strong id="upiId">9170694591@ybl</strong></span>
           <button class="copy-btn" id="copyUpi" type="button">Copy</button>
         </div>
-        <p id="copyMsg" class="copy-msg dark"></p>
-        <p class="apps">PhonePe • BHIM • G Pay • Paytm<br /><small>Scan • Donate • Support</small></p>
-        <p class="bank-note">🏦 <strong>Union Bank of India</strong><br /><small>Bank transfer? Account details shared on WhatsApp request.</small></p>
-        <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20please%20share%20bank%20account%20details%20for%20donation" target="_blank" rel="noopener" class="btn-whatsapp full">💬 Get Bank Details on WhatsApp</a>
+        <p id="copyMsg" class="copy-msg dark" role="status" aria-live="polite"></p>
+        <div class="pay-row">
+          <label class="pay-label" for="payAmount">Amount (INR)</label>
+          <div class="pay-input-row">
+            <input type="number" id="payAmount" min="1" max="100000" step="1" inputmode="numeric" placeholder="e.g. 501" aria-describedby="payNote" />
+            <button type="button" class="btn-upi" id="payUpiBtn">Pay via UPI app</button>
+          </div>
+          <p id="payNote" class="pay-note">Opens PhonePe, Google Pay, Paytm or BHIM on your mobile with the amount pre-filled.</p>
+          <p id="payMsg" class="copy-msg dark" role="status" aria-live="polite"></p>
+        </div>
+        <p class="apps">PhonePe · BHIM · Google Pay · Paytm<br /><small>UPI ID: 9170694591@ybl · Union Bank of India</small></p>
+        <p class="bank-note">For bank transfer (NEFT/IMPS), account details are shared on WhatsApp after a brief verification. This keeps donor records accurate.</p>
+        <div class="qr-actions">
+          <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20please%20share%20bank%20account%20details%20for%20donation" target="_blank" rel="noopener" class="btn-whatsapp full">Request bank details on WhatsApp</a>
+        </div>
       </div>
 
-      <!-- RIGHT: Form + Contact -->
       <div>
         <div class="form-card">
-          <h3>🧾 Get Donation Receipt</h3>
-          <p class="muted small">Fill after donating — we send 12A/80G receipt on WhatsApp.</p>
-          <form id="donateForm">
-            <label>Your Name *
-              <input type="text" id="dName" name="name" placeholder="Ex: Rahul Kumar" required maxlength="60" />
+          <h3>Request your donation receipt</h3>
+          <p class="muted small">Complete your UPI payment first, then submit this form. It opens WhatsApp with your details pre-filled. We respond with a formal receipt.</p>
+          <form id="donateForm" novalidate>
+            <label>Full name *
+              <input type="text" id="dName" name="name" placeholder="e.g. Rahul Kumar" required maxlength="60" autocomplete="name" />
             </label>
             <label>Phone / WhatsApp *
-              <input type="tel" id="dPhone" name="phone" placeholder="Ex: 98765 43210" required pattern="[0-9+ ]{10,15}" title="Enter valid phone number" />
+              <input type="tel" id="dPhone" name="phone" placeholder="e.g. 98765 43210" required pattern="[0-9+ ]{10,15}" title="Enter a valid phone number" autocomplete="tel" />
             </label>
-            <label>Amount Donated (₹) *
-              <input type="number" id="dAmount" name="amount" placeholder="Ex: 501" required min="1" max="1000000" />
+            <label>Amount donated (INR) *
+              <input type="number" id="dAmount" name="amount" placeholder="e.g. 501" required min="1" max="1000000" inputmode="numeric" />
             </label>
-            <label>UPI Ref / Txn ID (optional)
-              <input type="text" id="dTxn" name="txn" placeholder="Ex: UPI123456789" maxlength="40" />
+            <label>UPI reference / Transaction ID (optional, recommended)
+              <input type="text" id="dTxn" name="txn" placeholder="12-digit UTR or UPI Ref No." maxlength="40" />
+            </label>
+            <label>PAN for 80G receipt (optional)
+              <input type="text" id="dPan" name="pan" placeholder="Required only if you need an 80G tax receipt" maxlength="10" style="text-transform:uppercase" />
             </label>
             <label>Message (optional)
-              <textarea id="dMsg" name="message" rows="3" placeholder="Any message for the children..." maxlength="300"></textarea>
+              <textarea id="dMsg" name="message" rows="3" placeholder="A note for the team, if any." maxlength="300"></textarea>
             </label>
-            <button type="submit" class="btn-primary full">Send on WhatsApp →</button>
+            <button type="submit" class="btn-primary full">Submit via WhatsApp</button>
           </form>
-          <p class="form-note">No online payment saved here. You pay via your UPI app, then send details — 100% safe.</p>
+          <p class="form-note">No payment is processed on this website. You pay in your own UPI app, then share the reference here. Your details are used only for receipt and acknowledgement.</p>
         </div>
 
         <div class="contact-mini">
-          <h3>📍 Contact Us</h3>
-          <p><strong>INN FOCUS NGO</strong><br />Vill-Khudura, Post-Gahmar,<br />Distt Ghazipur, Uttar Pradesh</p>
-          <p>💬 WhatsApp: <a href="https://wa.me/919170694591"><strong>9170694591</strong></a><br />🙏 Education is not just a right, it’s a tool for a better tomorrow.</p>
+          <h3>Contact the organisation</h3>
+          <p><strong style="color:#fff">INN Focus NGO — Educational Empowerment Society</strong><br />Vill. Khudura, Post Gahmar,<br />District Ghazipur, Uttar Pradesh</p>
+          <p>WhatsApp: <a href="https://wa.me/919170694591"><strong>+91 91706 94591</strong></a><br />UPI: 9170694591@ybl · Reg. GAZ/02616/2024-2025</p>
         </div>
       </div>
     </section>
 
-    <!-- Trust strip -->
-    <section class="trustbar">
+    <section class="trustbar" aria-label="Assurances">
       <div class="container trust-grid">
-        <div class="trust-item"><span class="trust-icon">🛡️</span><div><strong>100% Trusted NGO</strong><small>Regd. GAZ/02616/2024-2025</small></div></div>
-        <div class="trust-item"><span class="trust-icon">🧾</span><div><strong>Receipt for Every Donation</strong><small>12A tax-exempt</small></div></div>
-        <div class="trust-item"><span class="trust-icon">🌿</span><div><strong>80G Tax Benefit</strong><small>Save tax while doing good</small></div></div>
-        <div class="trust-item"><span class="trust-icon">❤️</span><div><strong>Direct Impact</strong><small>Gahmar classrooms</small></div></div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div><strong>Registered entity</strong><small>GAZ/02616/2024-2025</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg></span>
+          <div><strong>Formal receipt</strong><small>Issued for every donation</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></span>
+          <div><strong>80G tax benefit</strong><small>On eligible donations with PAN</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg></span>
+          <div><strong>Direct delivery</strong><small>Classrooms in Gahmar, Ghazipur</small></div>
+        </div>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section class="container faq">
-      <div class="section-head">
-        <p class="eyebrow">Donor Questions</p>
-        <h2>Before You Donate</h2>
+      <div class="section-head centered">
+        <p class="eyebrow">Donor information</p>
+        <h2>Before you contribute</h2>
       </div>
       <details open>
-        <summary>Is my donation tax-exempt? (12A / 80G)</summary>
-        <p>Yes. INN Focus NGO is 12A registered and 80G approved under the Income Tax Act. After donation, share your name + amount + PAN (for 80G) on WhatsApp <strong>9170694591</strong> and we send the receipt.</p>
+        <summary>Is my donation eligible for tax benefit?</summary>
+        <p>Yes, subject to Income Tax provisions. The organisation is registered under Section 12A and approved under Section 80G. After payment, share your name, amount and PAN on WhatsApp at +91 91706 94591 and we will issue the applicable receipt.</p>
       </details>
       <details>
-        <summary>How do I donate via UPI?</summary>
-        <p>1. Open PhonePe / GPay / Paytm / BHIM → 2. Scan the QR on this page or pay to UPI ID <strong>9170694591@ybl</strong> → 3. Fill the receipt form above so we thank you properly.</p>
+        <summary>How do I pay by UPI?</summary>
+        <p>Open any UPI app (PhonePe, Google Pay, Paytm, BHIM), scan the QR on this page or pay to <strong>9170694591@ybl</strong>. Then complete the receipt form above so we can identify and acknowledge your payment.</p>
       </details>
       <details>
-        <summary>Where will my money go?</summary>
-        <p>Directly to INN Focus Classes, Gahmar — books, classes for Class 1-10, girl child support, skills and health drives. No big office cost.</p>
+        <summary>How are funds used?</summary>
+        <p>Funds support INN Focus Classes in Gahmar — teaching support, books and learning materials, girl-child retention efforts, skill sessions and community awareness. Administrative overhead is kept minimal.</p>
       </details>
       <details>
-        <summary>Can I donate without UPI? Bank transfer?</summary>
-        <p>Yes. Click “Get Bank Details on WhatsApp” above. We share Union Bank of India account details on request.</p>
+        <summary>Can I transfer directly to the bank account?</summary>
+        <p>Yes. Use “Request bank details on WhatsApp” above. Account details of our Union Bank of India account are shared after basic verification, and a receipt is issued on confirmation of credit.</p>
       </details>
       <div class="center">
-        <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20I%20want%20to%20donate" target="_blank" rel="noopener" class="btn-primary big">Donate Today for a Better Tomorrow ♥</a>
+        <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20I%20would%20like%20to%20donate" target="_blank" rel="noopener" class="btn-primary big">Donate to INN Focus NGO</a>
       </div>
     </section>
     <br />
@@ -132,24 +158,29 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <h4>INN FOCUS NGO</h4>
-        <p>Educational Empowerment Society<br />Vill-Khudura, Post-Gahmar,<br />Distt Ghazipur, Uttar Pradesh</p>
-        <p class="reg">Reg: GAZ/02616/2024-2025<br />12A & 80G Approved</p>
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="" width="40" height="40" />
+          <span><strong>INN FOCUS NGO</strong><small>Educational Empowerment Society</small></span>
+        </div>
+        <p>Vill. Khudura, Post Gahmar,<br />District Ghazipur, Uttar Pradesh</p>
+        <p class="reg">Reg. No. GAZ/02616/2024-2025<br />12A Registered · 80G Approved</p>
       </div>
       <div>
         <h4>Contact</h4>
-        <p>WhatsApp: <a href="https://wa.me/919170694591">9170694591</a><br />UPI: 9170694591@ybl</p>
-        <p>Quality Education for All<br />Empowered Communities</p>
+        <p>WhatsApp: <a href="https://wa.me/919170694591">+91 91706 94591</a><br />UPI: 9170694591@ybl</p>
+        <p style="margin-top:10px">Receipts issued for every donation.<br />Bank details shared on request.</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <p><a href="index.html">Home</a><br /><a href="about.html">About Us</a><br /><a href="work.html">Our Work</a><br /><a href="donate.html">Donate & Contact</a></p>
+        <h4>Organisation</h4>
+        <p><a href="index.html">Home</a><br /><a href="about.html">About</a><br /><a href="work.html">Our Work</a><br /><a href="donate.html">Donate and Contact</a></p>
       </div>
     </div>
-    <p class="copyright">© <span id="year">2026</span> INN Focus NGO • Together We Grow 🌱 • Education • Empowerment • Better Tomorrow</p>
+    <p class="copyright">© <span id="year">2026</span> INN Focus NGO, Educational Empowerment Society. All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20I%20want%20to%20donate" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+  <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20I%20would%20like%20to%20donate" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9 1-.9 2.5s1 2.9 1.1 3.1a7.8 7.8 0 003 2.6c.5.2.8.2 1.1.2.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
+  </a>
 
   <script src="js/main.js"></script>
 </body>

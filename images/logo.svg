@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- LESSON: Logo in code (SVG) = never blurs. Temp version, we will design together next -->
-  <!-- Book -->
-  <path d="M10 65 Q30 55 50 65 Q70 55 90 65 L90 80 Q70 70 50 80 Q30 70 10 80 Z" fill="#0A2A7A"/>
-  <path d="M10 65 Q30 55 50 65 L50 80 Q30 70 10 80 Z" fill="#123a9e"/>
-  <!-- 3 people -->
-  <circle cx="30" cy="38" r="10" fill="#1E63E9"/>
-  <circle cx="50" cy="30" r="12" fill="#1AA34A"/>
-  <circle cx="70" cy="38" r="10" fill="#F97316"/>
-  <!-- Sun -->
-  <circle cx="50" cy="18" r="6" fill="#FFC107"/>
-  <!-- Text base -->
-  <text x="50" y="95" font-size="11" font-family="Arial" font-weight="bold" text-anchor="middle" fill="#0A2A7A">INN</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="INN Focus NGO logo">
+  <circle cx="32" cy="32" r="30" fill="#0B2458"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#EAB308" stroke-width="2.5"/>
+  <!-- rising sun -->
+  <circle cx="32" cy="20" r="6" fill="#EAB308"/>
+  <!-- open book -->
+  <path d="M12 40c6-3.5 12-3.5 20 0 8-3.5 14-3.5 20 0v10c-6-3.5-12-3.5-20 0-8-3.5-14-3.5-20 0V40z" fill="#FFFFFF"/>
+  <path d="M32 40v10c-8-3.5-14-3.5-20 0V40c6-3.5 12-3.5 20 0z" fill="#DBEAFE"/>
+  <path d="M32 40v10c8-3.5 14-3.5 20 0V40c-6-3.5-12-3.5-20 0z" fill="#FFFFFF"/>
+  <!-- learners -->
+  <circle cx="22" cy="30" r="4" fill="#60A5FA"/>
+  <circle cx="32" cy="27.5" r="4.6" fill="#FFFFFF"/>
+  <circle cx="42" cy="30" r="4" fill="#34D399"/>
 </svg>

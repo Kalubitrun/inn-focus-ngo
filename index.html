@@ -2,183 +2,258 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INN FOCUS NGO | Educational Empowerment Society, Ghazipur UP</title>
-  <meta name="description" content="INN Focus NGO - Educational Empowerment Society, Ghazipur, Uttar Pradesh. Education for Class 1-10, Skill Development, Women & Child Empowerment. Reg No: GAZ/02616/2024-2025. 12A & 80G Approved - donations are tax-exempt." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b2458" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>INN Focus NGO | Educational Empowerment Society, Ghazipur</title>
+  <meta name="description" content="INN Focus NGO — Educational Empowerment Society, Ghazipur, Uttar Pradesh. Free learning support for Classes 1–10, skill development, and empowerment for girls and women. Registered NGO. 12A and 80G." />
+  <meta property="og:title" content="INN Focus NGO | Education and Empowerment, Ghazipur" />
+  <meta property="og:description" content="Free classes for Classes 1–10, skill development, and community programmes in Ghazipur, Uttar Pradesh." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
 </head>
 <body>
 
-  <!-- ============ HEADER (same on all 4 pages) ============ -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="images/logo.svg" alt="INN Focus NGO Logo" width="48" height="48" />
-        <span>
+      <a href="index.html" class="logo" aria-label="INN Focus NGO — Home">
+        <img src="images/logo.svg" alt="INN Focus NGO logo" width="44" height="44" />
+        <span class="logo-text">
           <strong>INN FOCUS NGO</strong>
           <small>Educational Empowerment Society</small>
         </span>
       </a>
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Us</a>
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About</a>
         <a href="work.html">Our Work</a>
-        <a href="donate.html" class="btn-donate">Donate Now ♥</a>
+        <a href="donate.html" class="btn-donate">Donate</a>
       </nav>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </header>
 
   <main>
-    <!-- ============ 1. HERO ============ -->
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
-          <p class="badge">★ Reg No: GAZ/02616/2024-2025 &nbsp;|&nbsp; 12A & 80G Approved</p>
-          <h1>Educate • Empower •<br /><span>Build a Better Tomorrow</span></h1>
-          <p class="hero-sub">A Non-Governmental Organization working for <strong>Education, Skill Development & Social Empowerment</strong> in Ghazipur, Uttar Pradesh.</p>
+          <p class="badge"><span class="dot"></span>Reg. No. GAZ/02616/2024-2025 · 12A &amp; 80G</p>
+          <h1>Learning that changes lives <span>in Ghazipur.</span></h1>
+          <p class="hero-sub">INN Focus NGO runs <strong>free learning support for Classes 1–10</strong>, practical skill programmes for youth, and education initiatives for girls and women — from Gahmar, Uttar Pradesh.</p>
           <div class="hero-buttons">
-            <a href="donate.html" class="btn-primary">Donate Now ♥</a>
-            <a href="work.html" class="btn-outline">See Our Work →</a>
+            <a href="donate.html" class="btn-primary">Donate securely</a>
+            <a href="work.html" class="btn-outline">Explore our work</a>
           </div>
-          <p class="hero-note">Your donation is eligible for <strong>tax exemption</strong> under 12A & 80G. Small contributions create big changes.</p>
+          <p class="hero-note">Registered non-profit. Donation receipts issued for every contribution. 12A and 80G applicable as per Income Tax Act.</p>
         </div>
         <div class="hero-photo">
-          <img src="images/group.jpg" alt="Students of INN Focus Classes, Ghazipur" />
-          <p class="photo-caption">📍 INN Focus Classes — Real students, real change</p>
+          <img src="images/hero-students.jpg" alt="Students of INN Focus Classes, Gahmar, with teachers" width="944" height="325" fetchpriority="high" decoding="async" />
+          <p class="photo-caption">INN Focus Classes, Gahmar — students and teachers</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ 2. TRUST BAR ============ -->
-    <section class="trustbar">
+    <!-- Trust bar -->
+    <section class="trustbar" aria-label="Credentials">
       <div class="container trust-grid">
-        <div class="trust-item"><span class="trust-icon">📜</span><div><strong>Registered NGO</strong><small>GAZ/02616/2024-2025</small></div></div>
-        <div class="trust-item"><span class="trust-icon">✅</span><div><strong>12A Registered</strong><small>Donation tax-exempt</small></div></div>
-        <div class="trust-item"><span class="trust-icon">🌿</span><div><strong>80G Approved</strong><small>Tax benefit on donations</small></div></div>
-        <div class="trust-item"><span class="trust-icon">📍</span><div><strong>Ghazipur, UP</strong><small>Vill-Khudura, Post-Gahmar</small></div></div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div><strong>Registered NGO</strong><small>Educational Empowerment Society<br />GAZ/02616/2024-2025</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg></span>
+          <div><strong>12A Registered</strong><small>Donations eligible for exemption under Section 12A</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-3-8-6-8-11a5 5 0 019-3 5 5 0 019 3c0 5-4 8-10 11z" transform="scale(0.9) translate(1.3 1)"/></svg></span>
+          <div><strong>80G Approved</strong><small>Donors can claim tax benefit under Section 80G</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><strong>Ghazipur, UP</strong><small>Vill. Khudura, Post Gahmar<br />District Ghazipur</small></div>
+        </div>
       </div>
     </section>
 
-    <!-- ============ 3. MISSION / VISION ============ -->
-    <section class="container mission-section">
-      <div class="section-head">
-        <p class="eyebrow">Together We Can Make a Difference</p>
-        <h2>Support • Educate • Empower • Transform</h2>
+    <!-- Mission -->
+    <section class="container">
+      <div class="section-head centered">
+        <p class="eyebrow">Why we exist</p>
+        <h2>A clear purpose, pursued consistently</h2>
+        <p>One organisation, three commitments — quality learning, practical skills, and equal opportunity.</p>
       </div>
       <div class="mission-grid">
-        <div class="mission-card red">
-          <h3>🎯 Our Mission</h3>
-          <p>To provide quality education, skill development and equal opportunities to underprivileged children and communities, so that they can build a better and brighter future.</p>
+        <div class="mission-card">
+          <span class="card-num" aria-hidden="true">01</span>
+          <div class="mission-top">
+            <span class="mission-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></span>
+            <span class="mission-tag">Mission</span>
+          </div>
+          <h3>Education with outcomes</h3>
+          <p>Structured learning support, skill development and equal opportunity for children with limited access — so they complete schooling and earn with dignity.</p>
         </div>
-        <div class="mission-card green">
-          <h3>🌱 Our Vision</h3>
-          <p>An educated, empowered and self-reliant society where every child gets a chance to grow, learn and achieve their dreams.</p>
+        <div class="mission-card">
+          <span class="card-num" aria-hidden="true">02</span>
+          <div class="mission-top">
+            <span class="mission-icon green" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-2-8-6-8-11 3 0 5 1 8 4 3-3 5-4 8-4 0 5-3 9-8 11z"/><path d="M12 21v-8"/></svg></span>
+            <span class="mission-tag">Vision</span>
+          </div>
+          <h3>A self-reliant society</h3>
+          <p>Every child — regardless of background or gender — learning, growing and finishing school in an educated, self-reliant community.</p>
         </div>
-        <div class="mission-card blue">
-          <h3>💛 Support Education Dreams</h3>
-          <p><strong>DREAM → LEARN → GROW → SUCCEED.</strong><br />Your kind contribution helps us support children, provide education & skill training, and bring positive change.</p>
-          <a href="about.html" class="link">Read more about us →</a>
+        <div class="mission-card">
+          <span class="card-num" aria-hidden="true">03</span>
+          <div class="mission-top">
+            <span class="mission-icon amber" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a1 1 0 011-1h13v13H5a1 1 0 00-1 1zm0 0a1 1 0 001 1h13"/><path d="M9 9h7M9 13h5"/></svg></span>
+            <span class="mission-tag">Approach</span>
+          </div>
+          <h3>Consistent and accountable</h3>
+          <p>Daily classes, personal follow-up with families and volunteer support — with receipts and records for every donation. <a href="about.html" class="link">About the organisation</a></p>
         </div>
       </div>
     </section>
 
-    <!-- ============ 4. WHAT WE DO ============ -->
+    <!-- Programs -->
     <section class="programs">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">What We Do</p>
-          <h2>Education is the Key to a Brighter Future 🔑</h2>
-          <p class="muted">6 focus areas. One goal — equality and dignity for all.</p>
+        <div class="section-head centered">
+          <p class="eyebrow">What we do</p>
+          <h2>Six focus areas, one standard of care</h2>
+          <p>All programmes operate from our base in Gahmar, with low overhead and direct delivery.</p>
         </div>
         <div class="program-grid">
-          <div class="program-card"><span class="p-icon blue">🎓</span><h4>Education Support</h4><p>Classes 1 to 10. For a brighter future.</p></div>
-          <div class="program-card"><span class="p-icon orange">📚</span><h4>Skill Development</h4><p>Life & vocational skills. For self-reliance.</p></div>
-          <div class="program-card"><span class="p-icon green">🤝</span><h4>Community Welfare</h4><p>Health, awareness & development. For a safer society.</p></div>
-          <div class="program-card"><span class="p-icon purple">🌿</span><h4>Environment Care</h4><p>For a greener planet.</p></div>
-          <div class="program-card"><span class="p-icon pink">👩‍👧</span><h4>Women & Child Empowerment</h4><p>Girl child education. For equality and dignity.</p></div>
-          <div class="program-card"><span class="p-icon teal">❤️</span><h4>Emergency Support</h4><p>Health, hygiene & help for those in need.</p></div>
+          <div class="program-card">
+            <span class="p-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4L2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v5"/></svg></span>
+            <h4>Education Support</h4><p>Free after-school support for Classes 1–10, including homework help and exam preparation.</p>
+          </div>
+          <div class="program-card">
+            <span class="p-icon orange" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a1 1 0 011-1h13v13H5a1 1 0 00-1 1zm0 0a1 1 0 001 1h13"/><path d="M9 9h7M9 13h5"/></svg></span>
+            <h4>Skill Development</h4><p>Communication, basic computer use and vocational guidance for self-reliance.</p>
+          </div>
+          <div class="program-card">
+            <span class="p-icon green" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5c2.8.3 5 2.6 5 5.5"/></svg></span>
+            <h4>Community Welfare</h4><p>Awareness sessions on health, rights and schooling, with support in genuine emergencies.</p>
+          </div>
+          <div class="program-card">
+            <span class="p-icon purple" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-2-8-6-8-11 3 0 5 1 8 4 3-3 5-4 8-4 0 5-3 9-8 11z"/></svg></span>
+            <h4>Environment</h4><p>Plantation and cleanliness drives for a greener, healthier village.</p>
+          </div>
+          <div class="program-card">
+            <span class="p-icon pink" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3.5"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></span>
+            <h4>Women and Child Empowerment</h4><p>Admission support, safety awareness and learning support with emphasis on the girl child.</p>
+          </div>
+          <div class="program-card">
+            <span class="p-icon teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></span>
+            <h4>Health and Hygiene</h4><p>Hygiene, nutrition and preventive-health guidance for children and mothers.</p>
+          </div>
         </div>
-        <div class="center"><a href="work.html" class="btn-secondary">View All Programs →</a></div>
+        <div class="center"><a href="work.html" class="btn-secondary">View all programmes</a></div>
       </div>
     </section>
 
-    <!-- ============ 5. REAL PHOTO PROOF ============ -->
+    <!-- Proof -->
     <section class="container proof-section">
       <div class="proof-grid">
-        <img src="images/group.jpg" alt="Group photo of INN Focus NGO students and teachers" class="proof-img" />
+        <div class="proof-media">
+          <img src="images/hero-students.jpg" alt="Group of INN Focus Classes students with teachers in Gahmar" class="main-img" />
+          <div class="proof-thumbs">
+            <img src="images/photo-girl.jpg" alt="Schoolgirl in uniform holding books" loading="lazy" decoding="async" />
+            <img src="images/photo-kids.jpg" alt="Primary school children in uniform" loading="lazy" decoding="async" />
+          </div>
+        </div>
         <div>
-          <p class="eyebrow">Your Donation Can Change Lives ♥</p>
-          <h2>Real Classes. Real Children. Real Impact.</h2>
+          <p class="eyebrow">Evidence, not promises</p>
+          <h2>Real classes. Regular attendance. Personal follow-up.</h2>
           <ul class="check-list">
-            <li>✅ Free learning support at <strong>INN Focus Classes, Gahmar</strong></li>
-            <li>✅ Focus on school education + life skills + values</li>
-            <li>✅ Special support for girl child education</li>
-            <li>✅ 100% trusted NGO — every rupee goes to the cause</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><span>Daily learning support at <strong>INN Focus Classes, Gahmar</strong>, for Classes 1–10</span></li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><span>School curriculum plus life skills, study habits and values</span></li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><span>Dedicated attention to girl-child enrolment and retention</span></li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><span>Receipt for every donation. Records available on request.</span></li>
           </ul>
-          <p class="quote">“Education is not just a right, it’s a tool for a better tomorrow.”</p>
+          <p class="quote">“Education is not only a right. It is the most reliable path to a better future.”</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ 6. DONATE ============ -->
+    <!-- Donate -->
     <section class="donate-home">
       <div class="container donate-grid">
         <div>
-          <p class="eyebrow light">Be a Part of Our Mission ♥</p>
-          <h2>Small Support, Big Change</h2>
-          <p>Scan & donate to support our noble cause. Your contribution helps underprivileged children get education, skills and a better livelihood.</p>
+          <p class="eyebrow light">Support the mission</p>
+          <h2>Your contribution funds classroom learning.</h2>
+          <p>Donate by UPI in under a minute. Funds cover books, teaching support and programme costs at INN Focus Classes. Bank transfer details are shared on request.</p>
           <div class="upi-box">
-            <span>UPI ID: <strong id="upiId">9170694591@ybl</strong></span>
-            <button class="copy-btn" id="copyUpi">Copy</button>
+            <span>UPI ID: <code id="upiId">9170694591@ybl</code></span>
+            <button class="copy-btn" id="copyUpi" type="button">Copy</button>
           </div>
-          <p id="copyMsg" class="copy-msg"></p>
+          <p id="copyMsg" class="copy-msg" role="status" aria-live="polite"></p>
+          <div class="pay-row dark">
+            <label class="pay-label" for="payAmountHome">Amount (INR)</label>
+            <div class="pay-input-row">
+              <input type="number" id="payAmountHome" min="1" max="100000" step="1" inputmode="numeric" placeholder="e.g. 501" />
+              <button type="button" class="btn-upi" id="payUpiBtnHome">Pay via UPI app</button>
+            </div>
+            <p id="payMsgHome" class="copy-msg" role="status" aria-live="polite"></p>
+          </div>
           <div class="donate-buttons">
-            <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20I%20want%20to%20donate" target="_blank" rel="noopener" class="btn-whatsapp">💬 WhatsApp: 9170694591</a>
-            <a href="donate.html" class="btn-primary">Donate Page →</a>
+            <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20I%20would%20like%20to%20donate" target="_blank" rel="noopener" class="btn-whatsapp">WhatsApp: 91706 94591</a>
+            <a href="donate.html" class="btn-primary">Donation options</a>
           </div>
-          <small>PhonePe • BHIM • GPay • Paytm accepted &nbsp;|&nbsp; Bank transfer details shared on request</small>
+          <p class="small" style="color:#94a3b8">PhonePe · BHIM · Google Pay · Paytm accepted. Tax receipt issued on sharing payment reference.</p>
         </div>
         <div class="qr-card">
-          <h4>Scan & Donate ♡</h4>
-          <img src="images/qr-upi.jpg" alt="UPI QR code for donation - Union Bank of India" />
-          <p><strong>Union Bank of India</strong><br />Supported on all UPI apps</p>
+          <div class="qr-card-top">
+            <h4>Scan to donate</h4>
+            <p>UPI · All apps supported</p>
+          </div>
+          <img src="images/qr-clean.png" alt="UPI QR code for INN Focus NGO donations" loading="lazy" decoding="async" width="656" height="656" />
+          <p class="bank"><strong>Union Bank of India</strong><br />UPI ID: 9170694591@ybl</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ 7. FINAL CTA ============ -->
+    <!-- Final CTA -->
     <section class="container cta-banner">
-      <h2>Your Support Brings Smiles 😊</h2>
-      <p>EDUCATION &nbsp;|&nbsp; EMPOWERMENT &nbsp;|&nbsp; EQUALITY &nbsp;|&nbsp; SUSTAINABLE FUTURE</p>
-      <a href="donate.html" class="btn-primary big">Donate Today for a Better Tomorrow ♥</a>
+      <h2>Help a child stay in school this year.</h2>
+      <p>Education · Empowerment · Equality · Sustainability</p>
+      <a href="donate.html" class="btn-primary big">Donate to INN Focus NGO</a>
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <h4>INN FOCUS NGO</h4>
-        <p>Educational Empowerment Society<br />Vill-Khudura, Post-Gahmar,<br />Distt Ghazipur, Uttar Pradesh</p>
-        <p class="reg">Reg: GAZ/02616/2024-2025<br />12A & 80G Approved</p>
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="" width="40" height="40" />
+          <span><strong>INN FOCUS NGO</strong><small>Educational Empowerment Society</small></span>
+        </div>
+        <p>Vill. Khudura, Post Gahmar,<br />District Ghazipur, Uttar Pradesh</p>
+        <p class="reg">Reg. No. GAZ/02616/2024-2025<br />12A Registered · 80G Approved</p>
       </div>
       <div>
         <h4>Contact</h4>
-        <p>WhatsApp: <a href="https://wa.me/919170694591">9170694591</a><br />UPI: 9170694591@ybl</p>
-        <p>Quality Education for All<br />Empowered Communities</p>
+        <p>WhatsApp: <a href="https://wa.me/919170694591">+91 91706 94591</a><br />UPI: 9170694591@ybl</p>
+        <p style="margin-top:10px">Receipts issued for every donation.<br />Bank details shared on request.</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <p><a href="index.html">Home</a><br /><a href="about.html">About Us</a><br /><a href="work.html">Our Work</a><br /><a href="donate.html">Donate & Contact</a></p>
+        <h4>Organisation</h4>
+        <p><a href="index.html">Home</a><br /><a href="about.html">About</a><br /><a href="work.html">Our Work</a><br /><a href="donate.html">Donate and Contact</a></p>
       </div>
     </div>
-    <p class="copyright">© <span id="year">2026</span> INN Focus NGO • Together We Grow 🌱 • Education • Empowerment • Better Tomorrow</p>
+    <p class="copyright">© <span id="year">2026</span> INN Focus NGO, Educational Empowerment Society. All rights reserved.</p>
   </footer>
 
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20I%20want%20to%20know%20more" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+  <a href="https://wa.me/919170694591?text=Hello%20INN%20Focus%20NGO%2C%20I%20would%20like%20to%20know%20more" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9 1-.9 2.5s1 2.9 1.1 3.1a7.8 7.8 0 003 2.6c.5.2.8.2 1.1.2.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
