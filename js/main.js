@@ -152,6 +152,67 @@
   bindPayButton('payAmount', 'payUpiBtn', 'payMsg');
   bindPayButton('payAmountHome', 'payUpiBtnHome', 'payMsgHome');
 
+  // Hero carousel: autoplay + arrows + dots + swipe + keyboard
+  (function initCarousel() {
+    var root = document.getElementById('heroCarousel');
+    if (!root) return;
+    var track = document.getElementById('carouselTrack');
+    var prev = document.getElementById('carouselPrev');
+    var next = document.getElementById('carouselNext');
+    var dotsWrap = document.getElementById('carouselDots');
+    var slides = track ? track.children.length : 0;
+    if (!track || !slides) return;
+    var i = 0;
+    var timer = null;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    slides = track.children.length;
+    for (var d = 0; d < slides; d++) {
+      (function (n) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-label', 'Show photo ' + (n + 1));
+        b.setAttribute('aria-selected', n === 0 ? 'true' : 'false');
+        b.addEventListener('click', function () { go(n); restart(); });
+        dotsWrap.appendChild(b);
+      })(d);
+    }
+    var dots = dotsWrap.children;
+
+    function go(n) {
+      i = (n + slides) % slides;
+      track.style.transform = 'translateX(-' + i * 100 + '%)';
+      for (var k = 0; k < dots.length; k++) {
+        dots[k].setAttribute('aria-selected', k === i ? 'true' : 'false');
+      }
+      var actives = track.querySelectorAll('.is-active');
+      for (var j = 0; j < actives.length; j++) actives[j].classList.remove('is-active');
+      track.children[i].classList.add('is-active');
+    }
+    function restart() {
+      if (timer) clearInterval(timer);
+      if (!reduceMotion) timer = setInterval(function () { go(i + 1); }, 5000);
+    }
+    if (prev) prev.addEventListener('click', function () { go(i - 1); restart(); });
+    if (next) next.addEventListener('click', function () { go(i + 1); restart(); });
+    root.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
+    root.addEventListener('mouseleave', restart);
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { go(i - 1); restart(); }
+      if (e.key === 'ArrowRight') { go(i + 1); restart(); }
+    });
+    var sx = null;
+    track.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      if (sx === null) return;
+      var dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 40) { go(i + (dx < 0 ? 1 : -1)); restart(); }
+      sx = null;
+    }, { passive: true });
+    restart();
+  })();
+
   function showFormError(text) {
     var note = document.querySelector('.form-note');
     if (note) {

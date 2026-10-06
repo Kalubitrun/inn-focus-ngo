@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0b2458" />
+  <meta name="theme-color" content="#8c3027" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <title>INN Focus NGO | Educational Empowerment Society, Ghazipur</title>
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
 </head>
@@ -55,8 +55,22 @@
           <p class="hero-note">Registered non-profit. Donation receipts issued for every contribution. 12A and 80G applicable as per Income Tax Act.</p>
         </div>
         <div class="hero-photo">
-          <img src="images/hero-students.jpg" alt="Students of INN Focus Classes, Gahmar, with teachers" width="944" height="325" fetchpriority="high" decoding="async" />
-          <p class="photo-caption">INN Focus Classes, Gahmar — students and teachers</p>
+          <div class="hero-carousel" id="heroCarousel" role="region" aria-roledescription="carousel" aria-label="Photos from INN Focus Classes">
+            <div class="carousel-viewport">
+              <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 6"><img src="images/hero-slide-1.jpg" alt="Girl students of INN Focus Classes with study materials" width="1280" height="633" fetchpriority="high" decoding="async" /></div>
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 6"><img src="images/hero-slide-2.jpg" alt="Students of INN Focus Classes group photo" width="1280" height="529" loading="lazy" decoding="async" /></div>
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 6"><img src="images/hero-slide-3.jpg" alt="Students studying in INN Focus classroom" width="1280" height="529" loading="lazy" decoding="async" /></div>
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 6"><img src="images/hero-slide-4.jpg" alt="Students writing during class at INN Focus" width="1280" height="662" loading="lazy" decoding="async" /></div>
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 6"><img src="images/hero-slide-5.jpg" alt="Learners at desks in INN Focus classroom" width="1280" height="883" loading="lazy" decoding="async" /></div>
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="6 of 6"><img src="images/hero-slide-6.jpg" alt="Students smiling together at INN Focus event" width="1080" height="474" loading="lazy" decoding="async" /></div>
+              </div>
+              <button class="carousel-arrow prev" id="carouselPrev" type="button" aria-label="Previous photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <button class="carousel-arrow next" id="carouselNext" type="button" aria-label="Next photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Choose photo"></div>
+          </div>
+          <p class="photo-caption">INN Focus Classes, Gahmar — real classrooms, real students</p>
         </div>
       </div>
     </section>
